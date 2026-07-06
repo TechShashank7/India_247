@@ -80,7 +80,7 @@ Instead of filling out long, confusing forms, citizens can simply chat with our 
 3. **Officer Review:** The Civic Officer logs into their specialized dashboard, evaluating pending complaints based on strict timeline SLA metrics.
 4. **Resolution Tracking:** The Officer updates the task sequentially (*Sent to Department → Under Inspection → Work Started → Resolved*).
 5. **Real-time Updates:** The Citizen's tracking timeline updates automatically.
-6. **Reopening Loop:** If the issue is unsatisfactorily marked as 'Resolved', the Citizen can request a 'Reopen' by uploading an image proof. This image and reason are rigorously **validated by Gemini AI** to prevent misuse before pushing it back to 'Pending' status.
+6. **Reopening Loop:** If the issue is unsatisfactorily marked as 'Resolved', the Citizen  can request a 'Reopen' by uploading an image proof. This image and reason are rigorously **validated by Gemini AI** to prevent misuse before pushing it back to 'Pending' status.
 
 ---
 
