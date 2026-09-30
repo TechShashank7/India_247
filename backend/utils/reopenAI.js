@@ -45,7 +45,7 @@ export const validateReopenReason = async (originalDescription, reason) => {
   const prompt = `You are an AI validator for a civic complaint platform. A user previously filed this complaint: "${originalDescription}". Now they want to REOPEN it with this reason: "${reason}". Is the reopen VALID? VALID if reason relates to original, issue unresolved, safety concern, or inadequate work. INVALID if unrelated, different issue, spam, or vague. Respond with ONLY raw JSON, nothing else: {"valid": true, "message": "short reason"} or {"valid": false, "message": "short reason"}`;
 
   try {
-    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${GEMINI_API_KEY}`;
 
     const res = await axios.post(GEMINI_URL, {
       contents: [{ parts: [{ text: prompt }] }],
@@ -79,7 +79,7 @@ export const validateReopenImage = async (originalDescription, reason, imagePath
   const prompt = `You are an AI image verifier for a civic complaint platform. Original complaint: "${originalDescription}". Reopen reason: "${reason}". Check: does the image match the original complaint and support the reopen reason? Reject if completely unrelated. Respond with ONLY raw JSON: {"valid": true, "message": "short reason"} or {"valid": false, "message": "short reason"}`;
 
   try {
-    const GEMINI_VISION_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+    const GEMINI_VISION_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${GEMINI_API_KEY}`;
 
     let fileData;
     if (imagePath.startsWith('http')) {
